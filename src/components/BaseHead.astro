@@ -44,3 +44,10 @@ const { title, description, image = "/placeholder-social.jpg" } = Astro.props;
 
 <!-- RSS -->
 <link rel="alternate" type="application/rss+xml" title="RSS feed for Sirius Newsroom" href="/rss.xml" />
+
+<!-- Redirect -->
+<script>
+  if (window.location.hostname !== "blog.sirius.menu" && window.location.hostname !== "localhost") {
+    window.location.hostname = "blog.sirius.menu";
+  }
+</script>
