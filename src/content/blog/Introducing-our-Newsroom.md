@@ -7,7 +7,7 @@ pubDate: "Feb 19 2023"
 heroImage: "/Newsroompng.png"
 ---
 
-Introducing Sirius Newsroom: Your One-Stop Destination for Updates, Features, and Announcements on Sirius
+Introducing the Newsroom: The one-stop shop for all Sirius Updates, New Features, and Announcements
 
 We're thrilled to announce the launch of Newsroom, our new place to keep you up-to-date with everything you need to know about Sirius. From new updates to exciting features and important announcements, Sirius is your one-stop destination for all things related to our product.
 
