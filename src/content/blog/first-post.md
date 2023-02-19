@@ -1,6 +1,8 @@
 ---
-title: "First post"
-description: "Lorem ipsum dolor sit amet"
+title: "Apple builds on privacy commitment by unveiling new education and awareness efforts on Data Privacy Day"
+description: "Fans can enjoy a wide variety of free Major League Soccer content starting today to get ready for the 2023 season kicking off February 25"
+isPublic: true
+type: "blog"
 pubDate: "Jul 08 2022"
 heroImage: "/placeholder-hero.jpg"
 ---

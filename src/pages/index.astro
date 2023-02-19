@@ -1,50 +1,101 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import { getCollection } from "astro:content";
+import FormattedDate from "../components/FormattedDate.astro";
+
+const posts = (await getCollection("blog")).sort((a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime());
 ---
 
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header title={SITE_TITLE} />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/pages/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
+<html lang="en" class="bg-black text-white">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header />
+    <main class="block tracking-tight leading-6 text-left p-4">
+      <section class="overflow-hidden pb-20 mt-0">
+        <div class="mx-auto max-w-5xl:w-[692px] max-w-3xl:w-[87.5%] max-w-3xl:w-[366px] tracking-tight leading-6 sm:mx-auto 2xl:w-[980px] w-[980px]">
+          <h2 class="mb-6 font-sans text-3xl font-bold tracking-normal">Latest News</h2>
+          <ul class="flex flex-grow-0 flex-shrink-0 justify-between items-stretch p-0 m-0 tracking-tight leading-6 text-left [flex-flow:_row_wrap] [content:'']">
+            <style>
+              #firstCard {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                z-index: 0;
+                border-radius: 10px;
+              }
+              #firstCard::before {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 250%;
+                z-index: 0;
+                background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.77311) 12.83%, rgba(0, 0, 0, 0.72685) 24%, rgba(0, 0, 0, 0.66487) 33.77%, rgba(0, 0, 0, 0.59081) 42.37%, rgba(0, 0, 0, 0.50831) 50.07%, rgba(0, 0, 0, 0.421) 57.13%, rgba(0, 0, 0, 0.33252) 63.78%, rgba(0, 0, 0, 0.24652) 70.3%, rgba(0, 0, 0, 0.16663) 76.92%, rgba(0, 0, 0, 0.09648) 83.91%, rgba(0, 0, 0, 0.03973) 91.52%, rgba(0, 0, 0, 0));
+                background-size: 100.1% 100.1%;
+                border-radius: 10px;
+              }
+            </style>
+            {
+              posts.map((post, index) => {
+                if (index === 0) {
+                  // Apply first post styles
+                  return (
+                    // full card with bg image and text in front. the bg image fills up the whole card and there is a gradient with ::before. The background image must be done with an img tag.
+                    <li class="basis-full h-[551px] w-[980px] relative list-none m-0 p-0 block bg-slate-600 rounded-xl  ">
+                      <a href={`/blog/${post.slug}/`} class="w-full visited:no-underline group h-full block relative group-hover:hover:[text-decoration:none] hover:[text-decoration:none]">
+                        <div class="relative overflow-hidden h-full w-full rounded-[10px]">
+                          <div style={`background: url('${post.data.heroImage}') no-repeat top; background-size: cover; height: 100%;`} class="h-full w-full group-hover:scale-105 overflow-hidden transition-all duration-500 rounded-[10px]" />
+                        </div>
+
+                        <div id="firstCard">
+                          <div class="px-9 pb-9 w-full box-border relative z-20 flex flex-col flex-shrink-0 flex-grow">
+                            <div>
+                              <div class="mb-3 text-white text-sm uppercase">{post.data.type}</div>
+                              <div class="text-4xl overflow-hidden font-bold">{post.data.title}</div>
+                            </div>
+                            <div class="mt-3 text-white">
+                              <FormattedDate date={post.data.pubDate} />
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                  );
+                } else {
+                  // Apply other post styles
+                  return (
+                    <li class="mt-9 relative list-none m-0 p-0">
+                      <a href={`/blog/${post.slug}/`} class="flex-col bg-black group rounded-xl overflow-hidden z-0 relative flex h-full w-[472px] visited:no-underline group-hover:hover:[text-decoration:none] hover:[text-decoration:none] border-2 border-white border-opacity-10">
+                        <div class="w-full h-64 min-h-[auto] basis-auto overflow-hidden flex-shrink">
+                          <div style={`background: url('${post.data.heroImage}') no-repeat top; background-size: cover; height: 100%;`} class="h-full w-full group-hover:scale-105 overflow-hidden transition-all duration-500 rounded-t-[10px]" />
+                        </div>
+
+                        <div class="p-8 justify-between basis-auto flex flex-col flex-shrink-0 flex-grow">
+                          <div>
+                            <div class="mb-2 text-white text-sm uppercase">{post.data.type}</div>
+                            <div class="text-2xl overflow-hidden font-bold">{post.data.title}</div>
+                          </div>
+                          <div class="mt-3 text-sm text-white">
+                            <FormattedDate date={post.data.pubDate} />
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                  );
+                }
+              })
+            }
+          </ul>
+        </div>
+      </section>
+      <Footer />
+    </main>
+  </body>
 </html>
