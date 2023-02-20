@@ -49,13 +49,13 @@ const { isPublic = true, title, description, pubDate, type, heroImage } = Astro.
           description && (
             <div class="mt-5 mb-0 mx-auto max-w-2xl ">
               <div class="mx-auto">
-                <p class="font-medium text-white text-2xl" set:html={description} />
+                <p class="font-medium !font-sfdisplay text-white text-2xl" set:html={description} />
               </div>
             </div>
           )
         }
         {heroImage && <img width={720} height={360} src={heroImage} alt="" />}
-        <div class="mx-auto">
+        <div class="mx-auto !font-sfdisplay">
           <slot />
         </div>
       </article>
