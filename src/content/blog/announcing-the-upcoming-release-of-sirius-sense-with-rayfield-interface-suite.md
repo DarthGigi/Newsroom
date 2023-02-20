@@ -3,7 +3,7 @@ title: "Announcing the Upcoming Release of Sirius Sense with Rayfield Interface 
 description: "This blog post announces the upcoming release of Sirius Sense, a high-performance ESP script, with Rayfield Interface Suite, a stunning UI library, to provide users with a powerful solution for defying the limits in the games you play."
 isPublic: true
 type: "blog"
-pubDate: "February 20, 2023"
+pubDate: "February 21, 2023"
 heroImage: "/SenseRayfield.png"
 ---
 
