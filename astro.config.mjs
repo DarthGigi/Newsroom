@@ -5,7 +5,6 @@ import sitemap from "@astrojs/sitemap";
 // https://astro.build/config
 import tailwind from "@astrojs/tailwind";
 import robotsTxt from "astro-robots-txt";
-
 // https://astro.build/config
 export default defineConfig({
   site: "https://blog.sirius.menu/",
@@ -13,7 +12,9 @@ export default defineConfig({
     mdx(),
     sitemap(),
     tailwind({
-      config: { applyBaseStyles: false },
+      config: {
+        applyBaseStyles: false,
+      },
     }),
     robotsTxt(),
   ],
