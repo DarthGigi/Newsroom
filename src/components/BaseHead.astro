@@ -51,3 +51,15 @@ const { title, description, image = "/placeholder-social.png" } = Astro.props;
     window.location.hostname = "blog.sirius.menu";
   }
 </script>
+
+<script defer>
+  const elements = document.querySelectorAll("[class*='text-[']");
+  elements.forEach((element) => {
+    const fontSize = element.className.match(/text-\[(.*?)\]/)[1];
+    if (parseInt(fontSize) <= 25.333333333333332) {
+      element.classList.add("font-sftext");
+    } else if (parseInt(fontSize) >= 26.666666666666664) {
+      element.classList.add("font-sfdisplay");
+    }
+  });
+</script>
