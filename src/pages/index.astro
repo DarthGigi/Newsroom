@@ -18,7 +18,7 @@ const posts = (await getCollection("blog")).filter((post) => post.data.isPublic 
     <Header />
     <main class="tracking-tight leading-6 text-left p-4">
       <section class="overflow-hidden pb-20 mt-0 md:px-10">
-        <div class="mx-auto tracking-tight max-w-[980px] leading-6">
+        <div class="mx-auto tracking-tight leading-6 max-w-[280px] sm:max-w-[366px] md:max-w-[692px] xl:max-w-[980px]">
           <h2 class="mb-6 font-sans text-3xl font-bold tracking-normal">Latest News</h2>
           <ul style="--gap:1rem;" class="flex flex-grow-0 gap-[var(--gap)] flex-shrink-0 justify-center lg:justify-between items-stretch p-0 m-0 tracking-tight leading-6 text-left [flex-flow:_row_wrap] [content:'']">
             <style>
