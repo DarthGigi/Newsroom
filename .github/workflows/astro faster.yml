@@ -1,0 +1,76 @@
+name: Deploy Astro site to Pages
+
+on:
+  push:
+    branches: ["master"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+env:
+  BUILD_PATH: "./"
+  # BUILD_PATH: subfolder
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: ${{ env.BUILD_PATH }}/node_modules
+          key: ${{ runner.os }}-${{ steps.detect-package-manager.outputs.manager }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-${{ steps.detect-package-manager.outputs.manager }}-
+          max-size: 1GB
+
+      - name: Cache .astro directory
+        uses: actions/cache@v2
+        with:
+          path: ${{ env.BUILD_PATH }}/.astro
+          key: ${{ runner.os }}-${{ steps.detect-package-manager.outputs.manager }}-${{ hashFiles('**/.astro/**') }}
+          restore-keys: |
+            ${{ runner.os }}-${{ steps.detect-package-manager.outputs.manager }}-
+          max-size: 1GB
+
+      - name: Build with Astro
+        run: |
+          yarn astro build \
+            --site "${{ secrets.GITHUB_PAGES_URL }}" \
+            --base "${{ secrets.GITHUB_PAGES_BASE_PATH }}" \
+            --parallel
+        working-directory: ${{ env.BUILD_PATH }}
+
+  deploy:
+    if: github.ref == 'refs/heads/master'
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    runs-on: ubuntu-latest
+    name: Deploy
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: JamesIves/github-pages-deploy-action@4.1.2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
+          folder: ${{ env.BUILD_PATH }}
+          base-path: ${{ secrets.GITHUB_PAGES_BASE_PATH }}
+          build-args: --site "${{ secrets.GITHUB_PAGES_URL }}" --base "${{ secrets.GITHUB_PAGES_BASE_PATH }}" --parallel
