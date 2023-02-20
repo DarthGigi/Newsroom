@@ -21,7 +21,7 @@ console.log(posts.length);
     <Header />
     <main class="tracking-tight leading-6 text-left p-4">
       <section class="overflow-hidden pb-20 mt-0 md:px-10">
-        <div class="mx-auto tracking-tight max-w-6xl leading-6">
+        <div class="mx-auto tracking-tight max-w-[980px] leading-6">
           <h2 class="mb-6 font-sans text-3xl font-bold tracking-normal">Latest News</h2>
           <ul style="--gap:1rem;" class="flex flex-grow-0 gap-[var(--gap)] flex-shrink-0 justify-center lg:justify-between items-stretch p-0 m-0 tracking-tight leading-6 text-left [flex-flow:_row_wrap] [content:'']">
             <style>
@@ -50,7 +50,7 @@ console.log(posts.length);
                 if (index === 0) {
                   // Apply first post styles
                   return (
-                    <li class="basis-full h-[350px] w-[280px] sm:h-[457px] sm:w-[366px] md:h-[389px] md:w-[692px] xl:h-[551px] xl:w-[980px] relative list-none m-0 p-0 block bg-slate-600 rounded-xl  ">
+                    <li class="h-[350px] w-[280px] sm:h-[457px] sm:w-[366px] md:h-[389px] md:w-[692px] xl:h-[551px] xl:w-[980px] relative list-none m-0 p-0 block bg-slate-600 rounded-xl  ">
                       <a href={`/blog/${post.slug}/`} class="w-full visited:no-underline group h-full block relative group-hover:hover:[text-decoration:none] hover:[text-decoration:none]">
                         <div class="relative overflow-hidden h-full w-full rounded-[10px]">
                           <div style={`background: url('${post.data.heroImage}') no-repeat top; background-size: cover; height: 100%;`} class="h-full w-full group-hover:scale-105 overflow-hidden transition-all duration-500 rounded-[10px]" />
