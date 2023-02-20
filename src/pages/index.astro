@@ -56,8 +56,8 @@ const posts = (await getCollection("blog")).filter((post) => post.data.isPublic 
                         <div id="firstCard">
                           <div class="px-9 pb-9 w-full box-border relative z-20 flex flex-col flex-shrink-0 flex-grow">
                             <div>
-                              <div class="mb-3 text-white text-sm uppercase">{post.data.type}</div>
-                              <div class="text-4xl overflow-hidden font-bold">{post.data.title}</div>
+                              <div class="mb-3 text-white text-xs md:text-sm uppercase">{post.data.type}</div>
+                              <div class="text-xl md:text-4xl font-bold">{post.data.title}</div>
                             </div>
                             <div class="mt-3 text-white">
                               <FormattedDate date={post.data.pubDate} />
