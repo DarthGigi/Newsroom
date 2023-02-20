@@ -5,7 +5,7 @@ const blog = defineCollection({
   schema: z.object({
     isPublic: z.boolean().optional(),
     title: z.string(),
-    description: z.string(),
+    description: z.string().transform((value) => value.replace(/\n/g, "<br>")),
     // type: is string but can be empy with ?
     type: z.string().optional(),
     // Transform string to Date object

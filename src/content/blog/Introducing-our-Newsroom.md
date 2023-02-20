@@ -1,6 +1,6 @@
 ---
 title: "Introducing the all-new Sirius Newsroom"
-description: "Introducing Sirius Newsroom, our new site dedicated to providing valuable insights and updates about our product. Stay informed and up-to-date with the latest news to make the most of your Sirius experience."
+description: "Introducing Sirius Newsroom, our new site dedicated to providing valuable insights and updates about our product. \n \n Stay informed and up-to-date with the latest news to make the most of your Sirius experience."
 isPublic: true
 type: "blog"
 pubDate: "February 19, 2023"
