@@ -8,7 +8,7 @@ import robotsTxt from "astro-robots-txt";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://example.com",
+  site: "https://blog.sirius.menu/",
   integrations: [
     mdx(),
     sitemap(),
