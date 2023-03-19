@@ -4,7 +4,7 @@ description: "Introducing Sirius Newsroom, our new site dedicated to providing v
 isPublic: true
 type: "blog"
 pubDate: "February 20, 2023"
-heroImage: "/Newsroompng.png"
+heroImage: "/assets/images/newsroom/Newsroompng.png"
 ---
 
 Introducing the Newsroom: The one-stop shop for all Sirius Updates, New Features, and Announcements

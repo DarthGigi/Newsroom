@@ -4,7 +4,7 @@ description: "This blog post announces the upcoming release of Sirius Sense, a h
 isPublic: true
 type: "announcement"
 pubDate: "February 21, 2023"
-heroImage: "/SenseRayfield.png"
+heroImage: "/assets/images/newsroom/SenseRayfield.png"
 ---
 
 We're excited to announce that our high-performance ESP script, Sirius Sense, will soon be released with our beautiful UI library, Rayfield Interface Suite. This exciting combination will make it easier for our users to utilize the power of Sirius Sense in-game without needing to have any knowledge of programming or experience in Rayfield Interface Suite development.

@@ -4,7 +4,7 @@ title: "My first post" # string, required. The title of the post, don't use it a
 description: "This is my first post" # string, required. The description of the post, don't use it again in the content
 type: "post" # string. The type of the post, can be "post" or "announcement" or whatever you like.
 pubDate: "Feb 19 2023" # string, required. The date of the post, will be used to sort the posts. In the format "MMM DD YYYY".
-heroImage: "/placeholder-hero.jpg" # string, optional. The path to the hero image of the post. If not provided, the default hero image will be used. The image should be most preferably 1920x1080px and 16/9 aspect ratio. Put the image you want in the public/ folder and to link it, use /image-name.jpg.
+heroImage: "/assets/images/newsroom/placeholder-hero.jpg" # string, optional. The path to the hero image of the post. If not provided, the default hero image will be used. The image should be most preferably 1920x1080px and 16/9 aspect ratio. Put the image you want in the public/assets/images/newsroom/ folder and to link it, use /assets/images/newsroom/image-name.jpg.
 ---
 
 Now write your post in markdown here. You can use styling like **bold** or _italic_ or ~~strikethrough~~. You can also use [links](https://www.apple.com) or images ![image](/placeholder-hero.jpg).
