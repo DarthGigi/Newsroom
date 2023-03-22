@@ -1,5 +1,5 @@
 ---
-isPublic: true
+isPublic: false
 title: "Announcing the release of several new updates and support for games"
 description: "This announcement outlines the release of the brand new Sirius Sense with Rayfield integration, along with new support for many games, and more."
 type: "announcement"
