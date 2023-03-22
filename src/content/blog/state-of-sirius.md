@@ -4,7 +4,7 @@ title: "Announcing the release of several new updates and support for games"
 description: "This announcement outlines the release of the brand new Sirius Sense x Rayfield UI, along with some goodies like two new games and more."
 type: "announcement"
 pubDate: "Mar 22 2023"
-heroImage: "/assets/images/newsroom/placeholder-hero.jpg"
+heroImage: "/assets/images/newsroom/Update.png"
 ---
 
 Sirius, the leading script that boasts unparalleled user experience, smart features, and an impressive interface, has just announced three new updates and releases that are set to revolutionize the experience for users.
