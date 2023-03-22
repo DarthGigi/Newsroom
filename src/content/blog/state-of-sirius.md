@@ -1,7 +1,7 @@
 ---
 isPublic: true
 title: "Announcing the release of several new updates and support for games"
-description: "This announcement outlines the release of the brand new Sirius Sense x Rayfield UI, along with some goodies like two new games and more."
+description: "This announcement outlines the release of the brand new Sirius Sense with Rayfield integration, along with two brand new games, and more."
 type: "announcement"
 pubDate: "Mar 22 2023"
 heroImage: "/assets/images/newsroom/Update.png"
