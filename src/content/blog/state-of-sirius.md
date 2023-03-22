@@ -17,7 +17,7 @@ Furthermore, we are releasing a new user interface for Sirius Sense, which uses 
 Try out this new release below:
 
 ```lua
-print("Test!")
+loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Sirius/request/SenseRayfield'))()
 ```
 
 At Sirius, we take pride in providing our users with the best experience possible. That's why we are constantly innovating and pushing the boundaries to make our script the best of its kind. With these new updates and releases, we believe we've taken a huge step towards achieving that goal.
@@ -27,3 +27,4 @@ If you haven't tried Sirius yet, now is the perfect time to do so. With our cutt
 In addition, we are excited to announce that Sirius Beta 2, a major update with even more features and improvements, is imminent, and set to release soon. We are also hard at work on Sirius Guard, our proprietary whitelist that will provide an added layer of security and exclusivity for our users. With these upcoming releases, we are committed to providing our users with the best possible experience and ensuring that Sirius remains at the forefront of the scripting industry.
 
 Stay tuned for more updates and releases from Sirius, as we continue to redefine the scripting experience.
+https://discord.gg/sirius
