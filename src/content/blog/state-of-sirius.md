@@ -11,7 +11,7 @@ Sirius, the leading script that boasts unparalleled user experience, smart featu
 
 First on the list is Sirius' recent addition of two popular games, Tower of Hell and Murder Mystery 2, to its ever-expanding list of supported games. This move is a significant milestone for the script as it opens up new possibilities for users looking to enhance their experience in these popular games.
 
-But that's not all. Sirius is also adding support for two more games, Frontlines and Bad Business, which further empowers our Pro and Essential users. For Bad Business, the Sirius team has completely rewritten the game script and added high-quality, overpowered features that are sure to blow users' minds.
+But that's not all. Sirius is also adding support for two more games, Frontlines and Bad Business, which further empowers our Pro and Essential users. For Bad Business, the Sirius team has completely rewritten the game script and added high-quality, overpowered features that are sure to blow users' minds. These will be available in the coming days or hours, used with the Loader.
 
 Furthermore, we are releasing a new user interface for Sirius Sense, which uses our unrivaled Rayfield Interface Suite UI library. The interface for Sense promises to be more intuitive, user-friendly, and customizable than ever before, providing users with a seamless and immersive experience while playing.
 Try out this new release below:
