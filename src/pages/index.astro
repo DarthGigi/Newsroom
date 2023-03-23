@@ -14,7 +14,7 @@ const posts = (await getCollection("blog")).filter((post) => post.data.isPublic 
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
-  <body class="w-screen">
+  <body class="w-full">
     <Header />
     <main class="tracking-tight mt-4 leading-6 text-left p-4">
       <section class="overflow-hidden pb-20 mt-0 md:px-10">
