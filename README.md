@@ -1,1 +1,1 @@
-# Sirius Blog
+# Gigi Blog
