@@ -11,7 +11,7 @@ export interface Props {
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const { title, description, image = "/assets/images/newsroom/banner.png" } = Astro.props;
+const { title, description, image = "/assets/images/newsroom.jpg" } = Astro.props;
 ---
 
 <!-- Global Metadata -->
@@ -34,7 +34,7 @@ const { title, description, image = "/assets/images/newsroom/banner.png" } = Ast
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={new URL(image, Astro.url)} />
-<meta property="og:site_name" content="Sirius Newsroom" />
+<meta property="og:site_name" content="TON Newsroom" />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
@@ -44,35 +44,16 @@ const { title, description, image = "/assets/images/newsroom/banner.png" } = Ast
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
 
 <!-- RSS -->
-<link rel="alternate" type="application/rss+xml" title="RSS feed for Sirius Newsroom" href="/rss.xml" />
-
-<!-- Redirect -->
-<script>
-  if (window.location.hostname !== "blog.sirius.menu" && window.location.hostname !== "localhost") {
-    window.location.hostname = "blog.sirius.menu";
-  }
-</script>
-
-<script defer>
-  const elements = document.querySelectorAll("[class*='text-[']");
-  elements.forEach((element) => {
-    const fontSize = element.className.match(/text-\[(.*?)\]/)[1];
-    if (parseInt(fontSize) <= 25.333333333333332) {
-      element.classList.add("font-sftext");
-    } else if (parseInt(fontSize) >= 26.666666666666664) {
-      element.classList.add("font-sfdisplay");
-    }
-  });
-</script>
+<link rel="alternate" type="application/rss+xml" title="RSS feed for TON Newsroom" href="/rss.xml" />
 
 <!-- Favicons -->
-<link rel="apple-touch-icon" sizes="180x180" href="https://cdn.sirius.menu/assets/favicons/apple-touch-icon.png?v=4" />
-<link rel="icon" type="image/png" sizes="32x32" href="https://cdn.sirius.menu/assets/favicons/favicon-32x32.png?v=4" />
-<link rel="icon" type="image/png" sizes="16x16" href="https://cdn.sirius.menu/assets/favicons/favicon-16x16.png?v=4" />
-<link rel="manifest" href="https://cdn.sirius.menu/assets/favicons/site.webmanifest?v=4" />
-<link rel="mask-icon" href="https://cdn.sirius.menu/assets/favicons/safari-pinned-tab.svg?v=4" color="#000000" />
-<link rel="icon" href="https://cdn.sirius.menu/assets/favicons/favicon.ico?v=4" />
-<link rel="shortcut icon" href="https://cdn.sirius.menu/assets/favicons/favicon.ico?v=4" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png" />
+<link rel="manifest" href="/assets/favicons/site.webmanifest" />
+<link rel="mask-icon" href="/assets/favicons/safari-pinned-tab.svg" color="#000000" />
+<link rel="icon" href="/assets/favicons/favicon.ico" />
+<link rel="shortcut icon" href="/assets/favicons/favicon.ico" />
 <meta name="msapplication-TileColor" content="#000000" />
-<meta name="msapplication-TileImage" content="https://cdn.sirius.menu/assets/favicons/mstile-144x144.png?v=4" />
-<meta name="msapplication-config" content="https://cdn.sirius.menu/assets/favicons/browserconfig.xml?v=4" />
+<meta name="msapplication-TileImage" content="/assets/favicons/mstile-144x144.png" />
+<meta name="msapplication-config" content="/assets/favicons/browserconfig.xml" />

@@ -17,7 +17,7 @@ export async function get() {
       <category>${post.data.type}</category>`,
     }));
 
-  const categories = ["Sirius", "Rayfield", "Blog", "News", "Updates", "Announcements", "Newsroom"];
+  const categories = ["TON", "Docs", "Blog", "News", "Updates", "Announcements", "Newsroom"];
 
   const customData = `
         <generator>AstroJS</generator>
@@ -26,7 +26,7 @@ export async function get() {
         <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
         <ttl>60</ttl>
         <image>
-            <url>https://blog.sirius.menu/placeholder-social.png</url>
+            <url>https://newsroom.tonantzintla.org/images/newsroom.jpg</url>
             <title>${SITE_TITLE}</title>
             <link>${SITE_URL}</link>
         </image>

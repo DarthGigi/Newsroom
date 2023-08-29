@@ -57,7 +57,7 @@ const posts = (await getCollection("blog")).filter((post) => post.data.isPublic 
                           <div class="px-9 pb-9 w-full box-border relative z-20 flex flex-col flex-shrink-0 flex-grow">
                             <div>
                               <div class="sm:mb-3 text-white text-xs md:text-sm uppercase font-semibold">{post.data.type}</div>
-                              <div class="text-xl md:text-4xl font-bold !font-sfdisplay">{post.data.title}</div>
+                              <div class="text-xl md:text-4xl font-bold">{post.data.title}</div>
                             </div>
                             <div class="sm:mt-3 text-white font-semibold">
                               <FormattedDate date={post.data.pubDate} />
@@ -78,8 +78,8 @@ const posts = (await getCollection("blog")).filter((post) => post.data.isPublic 
 
                         <div class="p-8 justify-between basis-auto flex flex-col flex-shrink-0 flex-grow">
                           <div>
-                            <div class="mb-2 text-white text-sm uppercase !font-sfdisplay">{post.data.type}</div>
-                            <div class="text-2xl overflow-hidden font-bold !font-sfdisplay">{post.data.title}</div>
+                            <div class="mb-2 text-white text-sm uppercase">{post.data.type}</div>
+                            <div class="text-2xl overflow-hidden font-bold">{post.data.title}</div>
                           </div>
                           <div class="mt-3 text-sm text-white">
                             <FormattedDate date={post.data.pubDate} />

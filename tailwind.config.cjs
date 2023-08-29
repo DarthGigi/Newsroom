@@ -5,8 +5,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sftext: ["SF Pro Text", ...defaultTheme.fontFamily.sans],
-        sfdisplay: ["SF Pro Display", ...defaultTheme.fontFamily.sans],
+        sans: ["Inter var", ...defaultTheme.fontFamily.sans],
       },
     },
   },
